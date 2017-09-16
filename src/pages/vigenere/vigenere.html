@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Vigenere Cipher</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Text(Uppercase Letter)</ion-label>
+        <ion-input type="text" name="text_input" #newtext></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>密钥Key</ion-label>
+        <ion-input type="text" name="k_input" #newk></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-grid>
+
+  <ion-row>
+
+    <ion-col col-4>
+        <button ion-button (click)="encrypt(newtext,newk)">Encrypt</button>
+    </ion-col>
+    <ion-col col-1>
+
+    </ion-col>
+    <ion-col col-4>
+        <button ion-button (click)="decrypt(newtext,newk)">Decrypt</button>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+
+
+
+
+    <ion-card>
+
+      <ion-card-header>
+        Result:
+      </ion-card-header>
+
+      <ion-card-content>
+        {{result}}
+      </ion-card-content>
+
+    </ion-card>
+
+</ion-content>
